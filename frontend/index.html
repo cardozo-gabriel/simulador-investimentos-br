@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FinTrack - Simulador de Investimentos</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
+  <body>
+    <header>
+      <h1>FinTrack</h1>
+      <p>Compare seus investimentos de forma profissional</p>
+    </header>
+
+    <main class="container">
+    <section class="card-input">
+        <h2>⚙️ Configurações</h2>
+        
+        <div class="campos-grid">
+            <div class="campo">
+                <label for="valor_inicial">Valor Inicial</label>
+                <input type="number" id="valor_inicial" value="1000">
+            </div>
+            <div class="campo">
+                <label for="aporte_mensal">Aporte Mensal</label>
+                <input type="number" id="aporte_mensal" value="200">
+            </div>
+            <div class="campo">
+                <label for="prazo">Prazo (meses)</label>
+                <input type="number" id="prazo" value="12">
+            </div>
+            <div class="campo">
+                <label for="taxa_cdi_cdb">CDB (% CDI)</label>
+                <input type="number" id="taxa_cdi_cdb" value="100">
+            </div>
+            <div class="campo">
+                <label for="taxa_cdi_lci">LCI (% CDI)</label>
+                <input type="number" id="taxa_cdi_lci" value="90">
+            </div>
+            <div class="campo">
+                <label for="taxa_pre_user">Tesouro Pré (%)</label>
+                <input type="number" id="taxa_pre_user" value="12">
+            </div>
+        </div>
+
+        <div class="info-taxas-box">
+            <p><strong>Taxas Utilizadas:</strong> CDI: 13,65% | Selic: 13,75% | IPCA: 4,50%</p>
+        </div>
+
+        <button id="btn-simular">Simular Agora</button>
+    </section>
+
+    <section class="card-resultado">
+        <h2>📊 Comparação de Investimentos</h2>
+        <div id="container-cards" class="grid-resultados">
+            <p class="aviso">Clique em simular para ver os dados.</p>
+        </div>
+    </section>
+
+    <section class="card-analise">
+    <h2>📊 Análise de Resultados</h2>
+
+    <div class="chart-full-width" style="margin-bottom: 20px;">
+        <h3>Comparação de Valor Final Bruto</h3>
+        <canvas id="graficoBarras"></canvas>
+    </div>
+
+    <div class="chart-full-width">
+        <h3>Evolução do Patrimônio ao Longo do Prazo</h3>
+        <canvas id="graficoLinha"></canvas>
+    </div>
+</section>
+</div>
+</main>
+
+    <script src="script.js"></script>
+  </body>
+
+  <footer class="site-footer">
+    <div class="footer-content">
+        <div class="footer-disclaimer">
+            <p><strong>⚠️ Aviso Legal:</strong> Este simulador é uma ferramenta exclusivamente educacional. Os cálculos utilizam projeções baseadas em taxas informadas e não garantem rentabilidade futura. Nada aqui constitui recomendação de compra, venda ou alocação de ativos financeiros.</p>
+        </div>
+        
+        <div class="footer-social">
+            <p>Desenvolvido por Gabriel Cardozo</p>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/gabrielhcardozo" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                <a href="https://github.com/cardozo-gabriel" target="_blank" title="GitHub"><i class="fab fa-github"></i> GitHub</a>
+                <a href="https://www.instagram.com/gabriel_hcardozo/" target="_blank" title="Instagram"><i class="fab fa-instagram"></i> Instagram</a>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2026 Simulador de Investimentos. Todos os direitos reservados.</p>
+    </div>
+</footer>
+</html>
